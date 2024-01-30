@@ -1,6 +1,6 @@
 import pg from 'pg'
 
-const database = new pg.Client('COLAR O LINK DE CONEXÃO DO ELEPHANT')
+const database = new pg.Client(BANCO_DE_DADOS)
 
 database.connect((erro) => {
     if(erro) {
