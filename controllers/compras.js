@@ -32,4 +32,4 @@ const postCompras = (req, res) => {
 
 
 // Exportando para importar nas rotas
-export { getCompras, postCompras }
+export { getCompras, postCompras, putCompras, deleteCompras }
