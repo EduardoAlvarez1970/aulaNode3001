@@ -1,13 +1,15 @@
-import pg from 'pg'
+//import pg from 'pg'
+import { Sequelize } from 'sequelize'
 
-const database = new pg.Client(BANCO_DE_DADOS)
+const sequelize = new Sequelize(process.env.BANCO_DE_DADOS)
 
-database.connect((erro) => {
-    if(erro) {
-        console.log(`Erro ao conectar ao banco: ${erro}`)
-   } else {
-        console.log(`Banco conectado com sucesso`)
-   }
-})
+try {
+     await sequelize.authenticate()
+     console.log('Conexão bem sucedida')
+} catch(erro) {
+     console.log('erro')
+}
 
-export default database
+
+
+export default sequelize

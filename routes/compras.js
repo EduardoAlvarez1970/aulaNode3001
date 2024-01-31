@@ -1,20 +1,15 @@
 import express from 'express'
-import { getCompras, postCompras, putCompras, deleteCompras } from '../controllers/compras.js'
+import { getHerois, postHerois } from '../controllers/compras.js'
 
 const router = express.Router()
 
 
 //listagem de informação
-router.get('/compras', getCompras) // getCompras vem do controller compras
+router.get('/herois', getHerois) // getCompras vem do controller compras
 
 //'Criação'
-router.post('/compras', postCompras) // postCompras vem do controller compras
+router.post('/herois', postHerois) // postCompras vem do controller compras
 
-//'Actualização'
-router.put('/compras', putCompras) // postCompras vem do controller compras
-
-//'Borrar'
-router.delete('/compras', deleteCompras) // postCompras vem do controller compras
 
 
 
